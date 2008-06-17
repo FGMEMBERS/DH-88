@@ -1,0 +1,162 @@
+<!-- D.H. 88 Comet      2008 BARANGER Emmanuel 
+
+   Envergure    : 13.4 m        ( 44'0 ft)
+   Longueur     :  8.8 m        ( 29'0 ft)
+   Hauteur      :  3.1 m        ( 10'0 ft)
+   Moteurs      : 2 x Gypsy Six (230 cv) 
+   Poids à vide : 1330 kg       ( 2930 lb)
+   Vitesse max  : 381 km/h      ( 237 mph)
+   Alttitude    : 5790 m        ( 19000 ft)
+-->
+
+<airplane mass="2930">
+
+  <approach speed="60" aoa="14">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+  </approach>
+
+  <cruise speed="195" alt="19000">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+  </cruise>
+
+  <cockpit x="-0.139" y="0" z="0.58"/>
+
+  <fuselage ax="4.397" ay="0" az="0.06" bx="-4.338" by="0" bz="0.399" width="1.049" taper="0.5" midpoint="0.25"/>
+
+  <wing x="1.312" y="0.293" z="-0.219" 
+        chord="2.343" 
+        taper=".20" 
+        length="6.319" 
+        camber="0.1"
+        sweep="2" 
+        dihedral="1.5">
+        <stall aoa="14" width="6" peak="1.5"/>
+        <flap1 start="0.550" end="0.945" lift="1.2" drag="1.2"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="-3.504" y="0.0" z="0.391" 
+         chord="1.320" 
+         taper="0.22" 
+         length="1.851" 
+         sweep="10" 
+         incidence="0">
+         <stall aoa="18" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0" effectiveness="0.3"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.320" y="0" z="0.248" 
+         chord="1.989" 
+         taper="0.24" 
+         length="1.262"
+         sweep="35">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" effectiveness="2.0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- Moteur gauche -->
+  <propeller x="2.500" y="1.469" z="-0.519"
+             mass="600" 
+             moment="35" 
+             radius="1.8"
+             cruise-power="200" 
+             cruise-speed="195"
+             cruise-rpm="2300" 
+             cruise-alt="19000">
+             <piston-engine eng-rpm="2700" 
+                            eng-power="230"
+                            displacement="1220" 
+                            compression="5"/>
+             <actionpt x="3.486" y="1.468" z="-0.387"/>
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  </propeller>
+
+  <!-- Moteur droit -->
+  <propeller x="2.500" y="-1.469" z="-0.519"
+             mass="600" 
+             moment="-35" 
+             radius="1.8"
+             cruise-power="200" 
+             cruise-speed="195"
+             cruise-rpm="2300" 
+             cruise-alt="19000">
+             <piston-engine eng-rpm="2700" 
+                            eng-power="230"
+                            displacement="1220" 
+                            compression="5"/>
+             <actionpt x="3.486" y="-1.468" z="-0.387"/>
+             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+  </propeller>
+
+  <gear x="2.043" y="1.468" z="-1.561" 
+        compression="0.3" 
+        retract-time="7" 
+        spring="1" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <gear x="2.043" y="-1.468" z="-1.561" 
+        compression="0.3" 
+        retract-time="7" 
+        spring="1" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+
+  <!-- Tail wheel; has castering selectable by a wheel lock -->
+  <gear x="-4.068" y="0" z="-0.233" 
+        compression="0.2">
+
+        <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING"/>
+  </gear>
+
+  <tank x="0" y="0.0" z="0.0" capacity="1000"/>
+
+<!--  <ballast x="0.0" y="0.0" z="0.0" mass="1500"/> -->
+
+</airplane>
+
