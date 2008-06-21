@@ -31,13 +31,33 @@
     </offsets>
   </model>
 
-  <!-- TURN -->
+  <!-- ASI -->
   <model>
-    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> 0.240 </x-m>
-      <y-m> 0.169 </y-m>
-      <z-m> 0.024 </z-m>
+      <y-m> 0.167 </y-m>
+      <z-m> 0.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.242 </x-m>
+      <y-m>  0.263 </y-m>
+      <z-m> -0.098 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.240 </x-m>
+      <y-m>  0.155 </y-m>
+      <z-m> -0.106 </z-m>
     </offsets>
   </model>
 

@@ -39,6 +39,7 @@
     <object-name>axeG2</object-name>
     <object-name>axeD2</object-name>
     <object-name>echapp</object-name>
+    <object-name>pito</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitre</object-name>
@@ -82,7 +83,10 @@
     <object-name>moteurs</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeD2</object-name>
     <object-name>echapp</object-name>
+    <object-name>pito</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>

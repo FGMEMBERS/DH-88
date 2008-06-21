@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!-- Airspeed indicator -->
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>60</ind>
+        <dep>65</dep>
+      </entry>
+      <entry>
+        <ind>80</ind>
+        <dep>115</dep>
+      </entry>
+      <entry>
+        <ind>100</ind>
+        <dep>175</dep>
+      </entry>
+      <entry>
+        <ind>120</ind>
+        <dep>230</dep>
+      </entry>
+      <entry>
+        <ind>140</ind>
+        <dep>285</dep>
+      </entry>
+      <entry>
+        <ind>160</ind>
+        <dep>335</dep>
+      </entry>
+      <entry>
+        <ind>180</ind>
+        <dep>380</dep>
+      </entry>
+      <entry>
+        <ind>200</ind>
+        <dep>425</dep>
+      </entry>
+      <entry>
+        <ind>250</ind>
+        <dep>515</dep>
+      </entry>
+      <entry>
+        <ind>300</ind>
+        <dep>575</dep>
+      </entry>
+      <entry>
+        <ind>400</ind>
+        <dep>650</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
