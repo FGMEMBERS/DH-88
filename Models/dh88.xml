@@ -36,6 +36,8 @@
     <object-name>moteurs</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeD2</object-name>
     <object-name>echapp</object-name>
 
     <!-- Objets transparents -->
@@ -291,15 +293,43 @@
     </axis>
   </animation>
 
+
+  <!-- Rentré des roues -->
+  <animation>
+    <type>rotate</type>
+    <object-name>axeG2</object-name>
+    <property>/gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>   0.0</ind>
+        <dep> -35.00</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -2.053 </x-m>
+      <y-m> -1.468 </y-m>
+      <z-m> -1.222 </z-m>
+    </center>
+    <axis>
+      <x>  0.00 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
   <!-- Train gauche -->
   <animation>
     <name>TrainG</name>
     <object-name>roueG</object-name>
     <object-name>cacheG</object-name>
     <object-name>axeG</object-name>
+    <object-name>axeG2</object-name>
   </animation>
 
-  <!-- Rentré des roues -->
   <animation>
     <type>rotate</type>
     <object-name>TrainG</object-name>
@@ -326,12 +356,39 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>axeD2</object-name>
+    <property>/gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>   0.0</ind>
+        <dep> -35.00</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -2.053 </x-m>
+      <y-m>  1.468 </y-m>
+      <z-m> -1.222 </z-m>
+    </center>
+    <axis>
+      <x>  0.00 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
   <!-- Train droit -->
   <animation>
     <name>TrainD</name>
     <object-name>roueD</object-name>
     <object-name>cacheD</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeD2</object-name>
   </animation>
 
   <animation>
