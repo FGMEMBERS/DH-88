@@ -78,6 +78,7 @@
   <nasal>
     <dh88>
       <file>Aircraft/DH-88/Nasal/doors.nas</file>
+      <file>Aircraft/DH-88/Nasal/light.nas</file>
       <file>Aircraft/DH-88/Nasal/liveries.nas</file>
     </dh88>
   </nasal>

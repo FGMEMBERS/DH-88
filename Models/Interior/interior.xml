@@ -25,7 +25,7 @@
   <model>
     <path>Aircraft/DH-88/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -0.348 </x-m>
+      <x-m> -0.262 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.163 </z-m>
     </offsets>

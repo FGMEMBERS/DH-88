@@ -36,10 +36,13 @@
     <object-name>moteurs</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeD1</object-name>
     <object-name>axeG2</object-name>
     <object-name>axeD2</object-name>
     <object-name>echapp</object-name>
     <object-name>pito</object-name>
+    <object-name>lamps</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitre</object-name>
@@ -48,6 +51,9 @@
     <object-name>propblurG</object-name>
     <object-name>propdiscD</object-name>
     <object-name>propblurD</object-name>
+    <object-name>lampR</object-name>
+    <object-name>lampG</object-name>
+    <object-name>lampD</object-name>
   </animation>
 
   <animation>
@@ -58,6 +64,9 @@
     <object-name>propblurG</object-name>
     <object-name>propdiscD</object-name>
     <object-name>propblurD</object-name>
+    <object-name>lampR</object-name>
+    <object-name>lampG</object-name>
+    <object-name>lampD</object-name>
   </animation>
 
   <animation>
@@ -83,10 +92,13 @@
     <object-name>moteurs</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeD1</object-name>
     <object-name>axeG2</object-name>
     <object-name>axeD2</object-name>
     <object-name>echapp</object-name>
     <object-name>pito</object-name>
+    <object-name>lamps</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -331,6 +343,7 @@
     <object-name>roueG</object-name>
     <object-name>cacheG</object-name>
     <object-name>axeG</object-name>
+    <object-name>axeG1</object-name>
     <object-name>axeG2</object-name>
   </animation>
 
@@ -392,6 +405,7 @@
     <object-name>roueD</object-name>
     <object-name>cacheD</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
   </animation>
 
@@ -418,6 +432,42 @@
       <x>  0.00 </x>
       <y>  1.00 </y>
       <z>  0.00 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>RoueGauche</name>
+    <object-name>roueG</object-name>
+    <object-name>axeG1</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>RoueGauche</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>0.0950</factor>
+    <axis>
+      <x> -0.018598 </x>
+      <y>  0.000000 </y>
+      <z>  0.170862 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>RoueDroite</name>
+    <object-name>roueD</object-name>
+    <object-name>axeD1</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>RoueDroite</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>0.0950</factor>
+    <axis>
+      <x> -0.018598 </x>
+      <y>  0.000000 </y>
+      <z>  0.170862 </z>
     </axis>
   </animation>
 
@@ -479,6 +529,38 @@
       <z> 0.000 </z>
     </axis>
   </animation>
+
+  <!-- Lumière rouge -->
+  <model>
+    <name>LeftLight</name>
+    <path>Aircraft/Carreidas/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m> -2.098 </x-m>
+      <y-m> -2.782 </y-m>
+      <z-m> -0.173 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Lumière verte -->
+  <model>
+    <name>RightLight</name>
+    <path>Aircraft/Carreidas/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> -2.098 </x-m>
+      <y-m>  2.782 </y-m>
+      <z-m> -0.173 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Beacon -->
+  <model>
+    <path>Aircraft/Carreidas/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> -1.180 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.406 </z-m>
+    </offsets>
+  </model>
 
 </PropertyList>
 

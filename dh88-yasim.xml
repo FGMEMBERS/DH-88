@@ -11,7 +11,7 @@
 
 <airplane mass="2930">
 
-  <approach speed="60" aoa="14">
+  <approach speed="70" aoa="14">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
@@ -23,8 +23,10 @@
   <cruise speed="195" alt="19000">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
@@ -97,6 +99,7 @@
              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
              <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
   </propeller>
 
   <!-- Moteur droit -->
@@ -117,6 +120,7 @@
              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
              <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
   </propeller>
 
   <gear x="2.043" y="1.468" z="-1.561" 
@@ -156,7 +160,8 @@
 
   <tank x="0" y="0.0" z="0.0" capacity="1000"/>
 
-<!--  <ballast x="0.0" y="0.0" z="0.0" mass="1500"/> -->
+  <!-- CH théorique x=1.312 y=0 z=-0.219 --> 
+  <ballast x="0.77" y="0.0" z="-0.065" mass="500"/>
 
 </airplane>
 

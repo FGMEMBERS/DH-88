@@ -28,6 +28,9 @@ d : Open/Close canopy
 Thanks
 ======
 
+Thanks LH Clic for the noze light picture
+Web page http://skyraider3d.military-meshes.com/skyraider/photos/walkarounds/dh88.htm for details pictures
+
 ===============
 BARANGER Emmanuel
 May, 25, 2007. 
@@ -65,6 +68,9 @@ d : Ouvrir/Fermer la verrière
 
 Remerciements
 =============
+
+Merci à LH CLic pour la texture du phare de nez
+le site http://skyraider3d.military-meshes.com/skyraider/photos/walkarounds/dh88.htm pour les photos de détails
 
 ===============
 BARANGER Emmanuel
