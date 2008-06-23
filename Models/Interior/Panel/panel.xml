@@ -11,13 +11,23 @@
     <!-- Objets transparents -->
   </animation>
 
-  <!-- AI -->
+  <!-- AI pilote -->
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
       <x-m> 0.242 </x-m>
       <y-m> 0.000 </y-m>
       <z-m> 0.008 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI copilote -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.997 </x-m>
+      <y-m> -0.174 </y-m>
+      <z-m> -0.116 </z-m>
     </offsets>
   </model>
 
@@ -41,7 +51,7 @@
     </offsets>
   </model>
 
-  <!-- VSI -->
+  <!-- VSI pilote -->
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
@@ -51,13 +61,33 @@
     </offsets>
   </model>
 
-  <!-- ALT -->
+  <!-- VSI co pilote -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.996 </x-m>
+      <y-m>  0.063 </y-m>
+      <z-m> -0.102 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT pilote -->
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m>  0.240 </x-m>
       <y-m>  0.155 </y-m>
       <z-m> -0.106 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT co pilote -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/alt/alt2.xml</path>
+    <offsets>
+      <x-m>  0.995 </x-m>
+      <y-m> -0.044 </y-m>
+      <z-m> -0.103 </z-m>
     </offsets>
   </model>
 
@@ -118,6 +148,26 @@
       <x-m>  0.241 </x-m>
       <y-m> -0.154 </y-m>
       <z-m> -0.186 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OIL TEMP 0 -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/oil-temp/oil-temp-0.xml</path>
+    <offsets>
+      <x-m>  0.244 </x-m>
+      <y-m> -0.260 </y-m>
+      <z-m> -0.259 </z-m>
+    </offsets>
+  </model>
+
+  <!-- BOOST 1 -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/oil-temp/oil-temp-1.xml</path>
+    <offsets>
+      <x-m>  0.244 </x-m>
+      <y-m> -0.154 </y-m>
+      <z-m> -0.259 </z-m>
     </offsets>
   </model>
 
