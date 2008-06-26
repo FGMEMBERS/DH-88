@@ -4,13 +4,20 @@
 
   <default>
     <menu n="10">
-      <label>Extras</label>
+      <label>DH 88 Comet</label>
       <enabled type="bool">true</enabled>
       <item>
         <label>Select Livery</label>
         <binding>
           <command>nasal</command>
           <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>dh88.immat_dialog.toggle()</script>
         </binding>
       </item>
     </menu>

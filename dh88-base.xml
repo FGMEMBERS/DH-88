@@ -32,6 +32,18 @@
 
     <menubar include="Dialogs/dh88-menu.xml"/>
 
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
   </sim>
 
   <controls>
@@ -80,6 +92,7 @@
       <file>Aircraft/DH-88/Nasal/doors.nas</file>
       <file>Aircraft/DH-88/Nasal/light.nas</file>
       <file>Aircraft/DH-88/Nasal/liveries.nas</file>
+      <file>Aircraft/DH-88/Nasal/immat.nas</file>
     </dh88>
   </nasal>
 
