@@ -20,7 +20,7 @@ var refresh_immat = func {
 }
 
 var immat_dialog = gui.Dialog.new("/sim/gui/dialogs/dh88/status/dialog",
-				  "Aircraft/DH-88/Dialogs/immat.xml");
+				  "Aircraft/DH-88/Gui/immat.xml");
 
 if (props.globals.getNode("/sim/model/immat") == nil)
     props.globals.getNode("/sim/model/immat",1).setValue("g-acss");
