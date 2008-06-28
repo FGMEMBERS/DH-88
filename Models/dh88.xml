@@ -16,7 +16,7 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
-    <object-name>aile</object-name>
+    <object-name>ailes</object-name>
     <object-name>aile2</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -72,7 +72,7 @@
   <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
-    <object-name>aile</object-name>
+    <object-name>ailes</object-name>
     <object-name>aile2</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>

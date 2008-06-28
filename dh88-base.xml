@@ -16,6 +16,9 @@
 
     <model>
       <path>Aircraft/DH-88/Models/dh88.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
     </model>
 
     <startup>
