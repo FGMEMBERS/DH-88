@@ -6,7 +6,7 @@
 
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/DH-91/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/DH-88/Models/Liveries", 10);
     </load>
     <unload>
       livery_update.stop();
@@ -543,7 +543,7 @@
   <!-- Lumière rouge -->
   <model>
     <name>LeftLight</name>
-    <path>Aircraft/Carreidas/Models/lights/RedLight.xml</path>
+    <path>Aircraft/DH-88/Models/lights/RedLight.xml</path>
     <offsets>
       <x-m> -2.098 </x-m>
       <y-m> -2.782 </y-m>
@@ -554,7 +554,7 @@
   <!-- Lumière verte -->
   <model>
     <name>RightLight</name>
-    <path>Aircraft/Carreidas/Models/lights/GreenLight.xml</path>
+    <path>Aircraft/DH-88/Models/lights/GreenLight.xml</path>
     <offsets>
       <x-m> -2.098 </x-m>
       <y-m>  2.782 </y-m>
@@ -564,7 +564,7 @@
 
   <!-- Beacon -->
   <model>
-    <path>Aircraft/Carreidas/Models/lights/beacon.xml</path>
+    <path>Aircraft/DH-88/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> -1.180 </x-m>
       <y-m>  0.000 </y-m>
