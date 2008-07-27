@@ -33,7 +33,7 @@
       </key>
     </help>
 
-    <menubar include="Gui/dh88-menu.xml"/>
+    <menubar include="Dialogs/dh88-menu.xml"/>
 
     <multiplay>
       <chat_display>1</chat_display>
