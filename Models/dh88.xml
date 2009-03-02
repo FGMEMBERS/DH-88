@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -45,7 +45,7 @@
     <object-name>lamps</object-name>
 
     <!-- Objets transparents -->
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
     <object-name>nez</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propblurG</object-name>
@@ -58,12 +58,23 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
     <object-name>nez</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propblurG</object-name>
     <object-name>propdiscD</object-name>
     <object-name>propblurD</object-name>
+    <object-name>lampR</object-name>
+    <object-name>lampG</object-name>
+    <object-name>lampD</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>nez</object-name>
     <object-name>lampR</object-name>
     <object-name>lampG</object-name>
     <object-name>lampD</object-name>
@@ -102,6 +113,35 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
   </animation>
 
   <!-- Immatriculation -->
@@ -118,9 +158,9 @@
   <model>
     <path>Aircraft/DH-88/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m>  0.044 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.307 </z-m>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0.0 </z-m>
     </offsets>
   </model>
 
@@ -520,7 +560,7 @@
   <animation>
     <name>Canopy</name>
     <object-name>tourvitre</object-name>
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
   </animation>
 
   <animation>

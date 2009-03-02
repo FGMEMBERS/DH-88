@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <PropertyList include="dh88-jsbsim-set.xml"> -->
-<PropertyList include="dh88-yasim-set.xml">
+<!-- <PropertyList include="dh88-jsbsim-cnf.xml"> -->
+<PropertyList include="dh88-yasim-cnf.xml">
 
   <sim>
     <description>de Havilland DH 88 Comet</description>
-    <author>Emmanuel BARANGER (3D)</author>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
   </sim>
 
 </PropertyList>

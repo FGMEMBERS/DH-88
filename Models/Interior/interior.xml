@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -9,15 +9,28 @@
     <object-name>interieur</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
   </animation>
 
   <!-- Panel -->
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -0.714 </x-m>
+      <x-m> -0.670 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.143 </z-m>
+      <z-m>  0.450 </z-m>
     </offsets>
   </model>
 
@@ -25,9 +38,9 @@
   <model>
     <path>Aircraft/DH-88/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -0.262 </x-m>
+      <x-m> -0.219 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.163 </z-m>
+      <z-m>  0.144 </z-m>
     </offsets>
   </model>
 
@@ -35,11 +48,28 @@
   <model>
     <path>Aircraft/DH-88/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m>  0.402 </x-m>
+      <x-m>  0.445 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.214 </z-m>
+      <z-m>  0.093 </z-m>
     </offsets>
   </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitres</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -85 </factor>
+    <center>
+      <x-m> 0.326 </x-m>
+      <y-m> 0.310 </y-m>
+      <z-m> 0.440 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
 
 </PropertyList>
 

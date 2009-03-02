@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!-- D.H. 88 Comet      2008 BARANGER Emmanuel 
 
    Envergure    : 13.4 m        ( 44'0 ft)
@@ -14,17 +16,19 @@
   <approach speed="70" aoa="14">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="0.1"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
     <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="0.1"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <cruise speed="195" alt="19000">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>

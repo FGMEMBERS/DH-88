@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- engine rpm instrument -->
 
@@ -7,65 +7,78 @@
   <path>rpm.ac</path>
 
   <animation>
-    <type>rotate</type>
-    <object-name>rpm-Needle1</object-name>
-    <property>engines/engine[0]/rpm</property>
-    <interpolation>
-      <entry>
-        <ind>0</ind>
-        <dep>0</dep>
-      </entry>
-      <entry>
-        <ind>5000</ind>
-        <dep>180</dep>
-      </entry>
-    </interpolation>
-    <center> 
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis> 
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+
+    <object-name>vitre</object-name>
   </animation>
 
-  <animation> 
-    <type>rotate</type>
-    <object-name>rpm-Needle2</object-name>
-    <property>engines/engine[0]/rpm</property>
-    <interpolation>
-      <entry>
-        <ind>0</ind>
-        <dep>0</dep>
-      </entry>
-      <entry>
-        <ind>5000</ind>
-        <dep>1800</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
   </animation>
 
-  <animation> 
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
     <type>material</type>
-    <emission> 
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-      <red>0.75</red>
-      <green>0.25</green>
-      <blue>0.25</blue>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <emission>
+      <red>   0.028 </red>
+      <green> 0.014 </green>
+      <blue>  0.007 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle1</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 5000 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <center> 
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 5000 </ind><dep> 1800 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
 
 </PropertyList>

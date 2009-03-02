@@ -1,10 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D)</author>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -49,16 +49,9 @@
 
   </sim>
 
-  <controls>
-    <engines>
-      <engine n="0">
-        <magnetos>3</magnetos>
-      </engine>
-      <engine n="1">
-        <magnetos>3</magnetos>
-      </engine>
-    </engines>
-  </controls>
+  <input>
+    <keyboard include="Nasal/dh88-keyboard.xml"/>
+  </input>
 
   <consumables>
     <fuel>
@@ -77,19 +70,6 @@
     </fuel>
   </consumables>
  
-  <engines>
-    <engine n="0">
-      <rpm>500</rpm>
-    </engine>
-    <engine n="1">
-      <rpm>500</rpm>
-    </engine>
-  </engines>
-
-  <input>
-    <keyboard include="Nasal/dh88-keyboard.xml"/>
-  </input>
-
   <nasal>
     <dh88>
       <file>Aircraft/DH-88/Nasal/doors.nas</file>
