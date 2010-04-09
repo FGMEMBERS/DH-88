@@ -21,7 +21,6 @@
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>profondeur</object-name>
-    <object-name>derive</object-name>
     <object-name>direction</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -43,6 +42,7 @@
     <object-name>echapp</object-name>
     <object-name>pito</object-name>
     <object-name>lamps</object-name>
+    <object-name>trous</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -72,7 +72,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitres</object-name>
     <object-name>nez</object-name>
     <object-name>lampR</object-name>
@@ -88,7 +88,6 @@
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>profondeur</object-name>
-    <object-name>derive</object-name>
     <object-name>direction</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -110,6 +109,8 @@
     <object-name>echapp</object-name>
     <object-name>pito</object-name>
     <object-name>lamps</object-name>
+    <object-name>trous</object-name>
+
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -142,6 +143,23 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/DH-88/Models/shadow.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <equals>
+        <property>sim[0]/rendering/shadows-ai</property>
+        <value>true</value>
+      </equals>
+    </condition>
   </animation>
 
   <!-- Immatriculation -->
@@ -611,6 +629,29 @@
       <z-m> -0.406 </z-m>
     </offsets>
   </model>
+
+  <!-- Wing light cone -->
+  <model>
+    <name>Taxi-Light</name>
+    <path>Aircraft/DH-88/Models/lights/light-cone.xml</path>
+    <offsets>
+      <x-m>       -4.250 </x-m>
+      <y-m>        0.000 </y-m>
+      <z-m>        0.064 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Taxi-Light</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[0]/position-norm</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
 
 </PropertyList>
 
