@@ -9,7 +9,9 @@
     <object-name>ImatWingBottom1</object-name>
     <object-name>ImatWingBottom2</object-name>
     <object-name>ImatWingBottom3</object-name>
+    <object-name>ImatWingBottom3-2</object-name>
     <object-name>ImatWingBottom4</object-name>
+    <object-name>ImatWingBottom4-2</object-name>
     <object-name>ImatWingBottom5</object-name>
     <object-name>ImatWingBottom6</object-name>
     <object-name>ImatWingUp1</object-name>
@@ -37,7 +39,9 @@
     <object-name>ImatWingBottom1</object-name>
     <object-name>ImatWingBottom2</object-name>
     <object-name>ImatWingBottom3</object-name>
+    <object-name>ImatWingBottom3-2</object-name>
     <object-name>ImatWingBottom4</object-name>
+    <object-name>ImatWingBottom4-2</object-name>
     <object-name>ImatWingBottom5</object-name>
     <object-name>ImatWingBottom6</object-name>
     <object-name>ImatWingUp1</object-name>
@@ -241,6 +245,7 @@
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatWingBottom3</object-name> 
+    <object-name>ImatWingBottom3-2</object-name> 
     <property>sim/multiplay/generic/int[2]</property>
     <factor> 0.0244140625 </factor>
     <axis> 
@@ -253,6 +258,7 @@
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatWingBottom4</object-name> 
+    <object-name>ImatWingBottom4-2</object-name> 
     <property>sim/multiplay/generic/int[3]</property>
     <factor> 0.0244140625 </factor>
     <axis> 
@@ -359,5 +365,35 @@
     </axis> 
   </animation>
 
-</PropertyList>
+  <!-- volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ImatWingBottom4-2</object-name> 
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 60 </factor>
+    <axis>
+      <x1-m> -0.89646 </x1-m>
+      <y1-m> -1.22699 </y1-m>
+      <z1-m> -0.29333 </z1-m>
+      <x2-m> -0.87133 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m> -0.35732 </z2-m>
+    </axis>
+  </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>ImatWingBottom3-2</object-name> 
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 60 </factor>
+    <axis>
+      <x1-m> -0.87133 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.35732 </z1-m>
+      <x2-m> -0.89646 </x2-m>
+      <y2-m>  1.22699 </y2-m>
+      <z2-m> -0.29333 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>

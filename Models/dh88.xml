@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -31,9 +31,11 @@
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
-    <object-name>aile2</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>aile2</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>bolG</object-name>
@@ -75,9 +77,11 @@
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
-    <object-name>aile2</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>aile2</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>bolG</object-name>
@@ -106,44 +110,54 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
-    <object-name>aile2</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>aile2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>pito</object-name>
+    <object-name>lamps</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>aile2</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>bolG</object-name>
@@ -180,16 +194,50 @@
     <object-name>lampD</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>nez</object-name>
+    <object-name>lampR</object-name>
+    <object-name>lampG</object-name>
+    <object-name>lampD</object-name>
+  </effect>
+
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/DH-88/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> -1 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/DH-88/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+
+  <!-- Immatriculation -->
+  <model>
+    <path>Aircraft/DH-88/Models/Immat/immat.xml</path>
   </model>
 
   <!-- Cranking effects -->
   <!-- Left -->
   <model>
-    <path>Aircraft/DH-88/Models/Effects/cranking/cranking.xml</path>
+    <path>Aircraft/DH-88/Models/Effects/cranking/crankingL.xml</path>
     <offsets>
       <x-m> -2.650 </x-m>
       <y-m> -1.224 </y-m>
@@ -198,7 +246,7 @@
   </model>
 
   <model>
-    <path>Aircraft/DH-88/Models/Effects/cranking/cranking.xml</path>
+    <path>Aircraft/DH-88/Models/Effects/cranking/crankingR.xml</path>
     <offsets>
       <x-m> -2.650 </x-m>
       <y-m>  1.727 </y-m>
@@ -237,26 +285,6 @@
     </offsets>
   </model>
 
-  <!-- Immatriculation -->
-  <model>
-    <path>Aircraft/DH-88/Models/Immat/immat.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/DH-88/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m>  0 </x-m>
-      <y-m>  0 </y-m>
-      <z-m>  0 </z-m>
-    </offsets>
-  </model>
-
   <!-- L'hélice gauche--> 
   <animation>
     <name>CompleteG</name>
@@ -273,7 +301,7 @@
     <condition>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
-        <value>1500</value>
+        <value>1200</value>
       </greater-than>
     </condition>
   </animation>
@@ -285,11 +313,11 @@
     <and>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
-        <value>600.000</value>
+        <value>400.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-        <value>1500.001</value>
+        <value>1200.001</value>
       </less-than>
     </and>
     </condition>
@@ -301,7 +329,7 @@
     <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-        <value>1500</value>
+        <value>1200</value>
       </less-than>
     </condition>
   </animation>
@@ -309,6 +337,12 @@
   <animation>
     <type>spin</type>
     <object-name>CompleteG</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 2 </factor>
     <center>
@@ -339,7 +373,7 @@
     <condition>
       <greater-than>
         <property>engines/engine[1]/rpm</property>
-        <value>1500</value>
+        <value>1200</value>
       </greater-than>
     </condition>
   </animation>
@@ -351,11 +385,11 @@
     <and>
       <greater-than>
         <property>engines/engine[1]/rpm</property>
-        <value>600.000</value>
+        <value>400.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[1]/rpm</property>
-        <value>1500.001</value>
+        <value>1200.001</value>
       </less-than>
     </and>
     </condition>
@@ -367,7 +401,7 @@
     <condition>
       <less-than>
         <property>engines/engine[1]/rpm</property>
-        <value>1500</value>
+        <value>1200</value>
       </less-than>
     </condition>
   </animation>
@@ -375,6 +409,12 @@
   <animation>
     <type>spin</type>
     <object-name>CompleteD</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[1]/rpm</property>
     <factor> 2 </factor>
     <center>
@@ -394,14 +434,16 @@
     <type>rotate</type>
     <object-name>profondeur</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> 11 </factor>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 3.72318 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.38970 </z-m>
+    </center>
     <axis>
-      <x1-m>  3.701 </x1-m>
-      <y1-m> -1.454 </y1-m>
-      <z1-m>  0.390 </z1-m>
-      <x2-m>  3.701 </x2-m>
-      <y2-m>  1.454 </y2-m>
-      <z2-m>  0.390 </z2-m>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -412,12 +454,12 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -20 </factor>
     <axis>
-      <x1-m> 3.714 </x1-m>
-      <y1-m> 0.000 </y1-m>
-      <z1-m> 0.431 </z1-m>
-      <x2-m> 3.714 </x2-m>
-      <y2-m> 0.000 </y2-m>
-      <z2-m> 1.110 </z2-m>
+      <x1-m> 3.7257 </x1-m>
+      <y1-m> 0.0000 </y1-m>
+      <z1-m> 0.4310 </z1-m>
+      <x2-m> 3.7237 </x2-m>
+      <y2-m> 0.0000 </y2-m>
+      <z2-m> 1.1073 </z2-m>
     </axis>
   </animation>
 
@@ -426,14 +468,14 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor> -15 </factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m> -0.923 </x1-m>
-      <y1-m> -3.819 </y1-m>
-      <z1-m> -0.152 </z1-m>
-      <x2-m> -1.035 </x2-m>
-      <y2-m> -6.274 </y2-m>
-      <z2-m> -0.060 </z2-m>
+      <x1-m> -1.02250 </x1-m>
+      <y1-m> -6.27419 </y1-m>
+      <z1-m> -0.05951 </z1-m>
+      <x2-m> -0.87535 </x2-m>
+      <y2-m> -3.81867 </y2-m>
+      <z2-m> -0.15501 </z2-m>
     </axis>
   </animation>
 
@@ -443,15 +485,45 @@
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
-      <x1-m> -0.923 </x1-m>
-      <y1-m>  3.819 </y1-m>
-      <z1-m> -0.152 </z1-m>
-      <x2-m> -1.035 </x2-m>
-      <y2-m>  6.274 </y2-m>
-      <z2-m> -0.060 </z2-m>
+      <x1-m> -0.87535 </x1-m>
+      <y1-m>  3.81867 </y1-m>
+      <z1-m> -0.15501 </z1-m>
+      <x2-m> -1.02250 </x2-m>
+      <y2-m>  6.27419 </y2-m>
+      <z2-m> -0.05951 </z2-m>
     </axis>
   </animation>
 
+  <!-- volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>voletG</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 60 </factor>
+    <axis>
+      <x1-m> -0.89646 </x1-m>
+      <y1-m> -1.22699 </y1-m>
+      <z1-m> -0.29333 </z1-m>
+      <x2-m> -0.87133 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m> -0.35732 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>voletD</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 60 </factor>
+    <axis>
+      <x1-m> -0.87133 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.35732 </z1-m>
+      <x2-m> -0.89646 </x2-m>
+      <y2-m>  1.22699 </y2-m>
+      <z2-m> -0.29333 </z2-m>
+    </axis>
+  </animation>
 
   <!-- Rentré des roues -->
   <animation>
@@ -625,7 +697,7 @@
     </axis>
   </animation>
 
-  <!-- Verrière -->
+  <!-- Canopy -->
   <animation>
     <name>Canopy</name>
     <object-name>tourvitre</object-name>
@@ -633,9 +705,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>Canopy</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
     <type>rotate</type>
     <object-name>Canopy</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -85 </factor>
     <center>
       <x-m> 0.326 </x-m>
@@ -705,4 +791,3 @@
   </animation>
 
 </PropertyList>
-

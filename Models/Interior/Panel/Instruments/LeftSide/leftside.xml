@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>leftside.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>throttleL1</object-name>
+    <object-name>throttleR1</object-name>
+    <object-name>throttleL2</object-name>
+    <object-name>throttleR2</object-name>
+    <object-name>tringleL</object-name>  
+    <object-name>tringleR</object-name>  
+    <object-name>mixtureL1</object-name>
+    <object-name>mixtureR1</object-name>
+    
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleL1</object-name>
+    <object-name>tringleL</object-name>  
+    <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.012000 </x-m>
+      <y-m>  0.335290 </y-m>
+      <z-m>  0.003956 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>tringleL</object-name>  
+    <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.01200 </x-m>
+      <y-m>  0.40079 </y-m>
+      <z-m> -0.04121 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleR1</object-name>
+    <object-name>tringleR</object-name>  
+    <property>/controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.010000 </x-m>
+      <y-m> 0.335290 </y-m>
+      <z-m> 0.003956 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>tringleR</object-name>  
+    <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.01000 </x-m>
+      <y-m>  0.40079 </y-m>
+      <z-m> -0.04121 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleL2</object-name>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.010830 </x-m>
+      <y-m> -0.407940 </y-m>
+      <z-m>  0.003956 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleR2</object-name>
+    <property>/controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032830 </x-m>
+      <y-m> -0.407940 </y-m>
+      <z-m>  0.003956 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>mixtureL1</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.007000 </x-m>
+      <y-m>  0.304930 </y-m>
+      <z-m>  0.002288 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>mixtureR1</object-name>
+    <property>controls/engines/engine[1]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.010000 </x-m>
+      <y-m> 0.304930 </y-m>
+      <z-m> 0.002288 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+</PropertyList>

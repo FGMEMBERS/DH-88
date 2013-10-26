@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList> 
 
@@ -23,6 +23,15 @@
     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
 
   <animation>
     <type>material</type>
@@ -53,7 +62,7 @@
       <entry><ind> 5000 </ind><dep>  10 </dep></entry>
     </interpolation>
     <center> 
-      <x-m> -0.04 </x-m>
+      <x-m> -0.03 </x-m>
       <y-m>  0.00 </y-m>
       <z-m>  0.00 </z-m>
     </center>

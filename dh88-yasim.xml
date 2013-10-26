@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- D.H. 88 Comet        : BARANGER Emmanuel (2008)
      update               : BARANGER Emmanuel (2010) with Melchior's script
+     update               : BARANGER Emmanuel (2013)
 
      Sources              : http://en.wikipedia.org/wiki/De_Havilland_DH.88
 
@@ -16,25 +17,25 @@
 
 <airplane mass="3000">
 
-  <approach speed="60" aoa="14">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/boost" value="0.1"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/boost" value="0.1"/>
-    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+  <approach speed="60" aoa="3" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="0"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <cruise speed="195" alt="19000">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.8"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
@@ -56,14 +57,19 @@
         camber="0.09"
         sweep="1.5" 
         dihedral="1.5">
-        <stall aoa="14" width="3" peak="1.5"/>
-        <flap1 start="0.550" end="0.945" lift="1.2" drag="1.2"/>
+        <stall aoa="20" width="1" peak="3"/>
+        <flap0 start="-0.046" end="0.16" lift="1.2" drag="2.2"/>
+        <flap1 start="0.5" end="1" lift="1.3" drag="1.2"/>
 
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+      <control-speed control="FLAP0" transition-time="5"/>
   </wing>
 
   <hstab x="-3.504" y="0.0" z="0.391" 
@@ -71,8 +77,8 @@
          length="1.870" 
          taper="0.22" 
          sweep="12">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+         <stall aoa="18" width="1" peak="1.3"/>
+         <flap0 start="0" end="1" lift="1.2" drag="1.3"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0" effectiveness="0.3"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -85,8 +91,8 @@
          length="1.48"
          taper="0.24" 
          sweep="30">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+         <stall aoa="14" width="1" peak="2.5"/>
+         <flap0 start="0" end="1" lift="1.3" drag="1.5"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0" effectiveness="2.0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -96,60 +102,64 @@
 
   <!-- Engines   source            : http://en.wikipedia.org/wiki/De_Havilland_Gipsy_Six
 
-                 name              : de Havilland Gipsy Six
-                 type              : 6-cylinder air-cooled inverted inline piston aircraft engine
-                 power cruise      : 200 hp at 2350 rpm 
-                 weight            : 468 lb (213 kg)
-                 compression       : 5.25:1
-                 Displacement      : 560.6 in3 (9.186 L)
+                 Name              : de Havilland Gipsy Six
+                 Type              : 6-cylinder air-cooled inverted inline piston aircraft engine
+                 Displacement      : 560.6 in3 ( 9.186 L )
+                 Power cruise      : 200 hp at 2350 rpm (on 70 octane fuel)
+                 Weight            : 468 lb ( 213 kg )
+                 Compression       : 5.25:1
   -->
   <!-- Moteur gauche -->
-  <propeller x="2.500" y="1.469" z="-0.519"
+  <propeller x="2.5" y="1.469" z="-0.519"
              mass="468" 
-             moment="3.5" 
+             moment="15" 
              radius="0.918"
-             cruise-power="185" 
+             cruise-power="185"
              cruise-speed="200"
-             cruise-rpm="2300" 
+             cruise-rpm="2200"
              cruise-alt="19000">
-             <piston-engine eng-rpm="2700" 
-                            eng-power="200"
-                            displacement="560.6" 
-                            compression="5.25"/>
              <actionpt x="3.486" y="1.468" z="-0.387"/>
-             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-             <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+             <piston-engine eng-rpm="2350"
+                            eng-power="200" 
+                            compression="5.25"
+                            displacement="560.6">
+                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+                            <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+             </piston-engine>
   </propeller>
 
   <!-- Moteur droit -->
-  <propeller x="2.500" y="-1.469" z="-0.519"
+  <propeller x="2.5" y="-1.469" z="-0.519"
              mass="468" 
-             moment="3.5" 
+             moment="15" 
              radius="0.918"
-             cruise-power="185" 
+             cruise-power="185"
              cruise-speed="200"
-             cruise-rpm="2300" 
+             cruise-rpm="2200"
              cruise-alt="19000">
-             <piston-engine eng-rpm="2700" 
-                            eng-power="200"
-                            displacement="560.6" 
-                            compression="5.25"/>
              <actionpt x="3.486" y="-1.468" z="-0.387"/>
-             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
-             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
-             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
-             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
-             <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+             <piston-engine eng-rpm="2350"
+                            eng-power="200" 
+                            compression="5.25"
+                            displacement="560.6">
+                            <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+                            <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+             </piston-engine>
   </propeller>
 
   <gear x="2.043" y="1.468" z="-1.561" 
         compression="0.3" 
         retract-time="7" 
-        spring="1" 
-        damp="10">
+        spring="0.8"
+        damp="4.2"
+        sfric="0.6"
+        dfric="0.8">
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -162,8 +172,10 @@
   <gear x="2.043" y="-1.468" z="-1.561" 
         compression="0.3" 
         retract-time="7" 
-        spring="1" 
-        damp="10">
+        spring="0.8"
+        damp="4.2"
+        sfric="0.6"
+        dfric="0.8">
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -180,10 +192,12 @@
         <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1" dst0="1" dst1="0" control="CASTERING"/>
   </gear>
 
-  <tank x="0" y="0" z="0.0" capacity="1000"/>
+  <!-- 140 gallons = 840.3 pounds-->  
+  <tank x="2" y="0" z="0" capacity="840.3"/>
+  <!-- 120 gallons = 720.3 pounds -->
+  <tank x="0" y="0" z="0" capacity="720.3"/>
 
-  <!-- CH theorique x=1.312 y=0 z=-0.219 --> 
-  <ballast x="0.77" y="0.0" z="-0.065" mass="500"/>
+  <!-- Mass displacment --> 
+  <ballast x="2" y="0" z="-1" mass="500"/>
 
 </airplane>
-

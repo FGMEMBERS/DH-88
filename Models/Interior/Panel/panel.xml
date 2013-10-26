@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -125,7 +125,7 @@
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
     <offsets>
-      <x-m>  0.241 </x-m>
+      <x-m>  0.240 </x-m>
       <y-m> -0.154 </y-m>
       <z-m> -0.083 </z-m>
     </offsets>
@@ -135,7 +135,7 @@
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/boost/boost-0.xml</path>
     <offsets>
-      <x-m>  0.241 </x-m>
+      <x-m>  0.240 </x-m>
       <y-m> -0.260 </y-m>
       <z-m> -0.186 </z-m>
     </offsets>
@@ -145,7 +145,7 @@
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/boost/boost-1.xml</path>
     <offsets>
-      <x-m>  0.241 </x-m>
+      <x-m>  0.240 </x-m>
       <y-m> -0.154 </y-m>
       <z-m> -0.186 </z-m>
     </offsets>
@@ -155,19 +155,29 @@
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/oil-temp/oil-temp-0.xml</path>
     <offsets>
-      <x-m>  0.244 </x-m>
+      <x-m>  0.240 </x-m>
       <y-m> -0.260 </y-m>
       <z-m> -0.259 </z-m>
     </offsets>
   </model>
 
-  <!-- BOOST 1 -->
+  <!-- OIL TEMP 1 -->
   <model>
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/oil-temp/oil-temp-1.xml</path>
     <offsets>
-      <x-m>  0.244 </x-m>
+      <x-m>  0.240 </x-m>
       <y-m> -0.154 </y-m>
       <z-m> -0.259 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.240 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m>  0.039 </z-m>
     </offsets>
   </model>
 
@@ -176,13 +186,31 @@
     <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
     <offsets>
       <x-m>  0.241 </x-m>
-      <y-m> -0.200 </y-m>
+      <y-m> -0.100 </y-m>
       <z-m>  0.000 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- RIGHT SIDE -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/RightSide/rightside.xml</path>
+    <offsets>
+      <x-m>  0.45660 </x-m>
+      <y-m>  0.33394 </y-m>
+      <z-m> -0.08227 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- LEFT SIDE -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/LeftSide/leftside.xml</path>
+    <offsets>
+      <x-m>  0.68603 </x-m>
+      <y-m> -0.33145 </y-m>
+      <z-m> -0.25390 </z-m>
+      <heading-deg> 90 </heading-deg>
     </offsets>
   </model>
 
 </PropertyList>
-

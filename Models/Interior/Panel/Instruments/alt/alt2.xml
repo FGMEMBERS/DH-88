@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- altimeter -->
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList> 
 
@@ -29,6 +27,15 @@
     <object-name>vitre</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -36,10 +43,10 @@
     <object-name>needle2</object-name>
     <object-name>needle3</object-name>
     <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -47,12 +54,7 @@
     <type>rotate</type>
     <object-name>needle1</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.36</factor>
-    <center> 
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
+    <factor> 0.36 </factor>
     <axis> 
       <x> -1 </x>
       <y>  0 </y>
@@ -64,12 +66,7 @@
     <type>rotate</type>
     <object-name>needle2</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.036</factor>
-    <center> 
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
+    <factor> 0.036 </factor>
     <axis> 
       <x> -1 </x>
       <y>  0 </y>
@@ -81,12 +78,7 @@
     <type>rotate</type>
     <object-name>needle3</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.0036</factor>
-    <center> 
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
+    <factor> 0.0036 </factor>
     <axis> 
       <x> -1 </x>
       <y>  0 </y>
