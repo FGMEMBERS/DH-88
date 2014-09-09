@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttourvitre</object-name>
+    <object-name>planchet</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>intvitres</object-name>
+  </effect>
+
+  <!-- Panel -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -0.670 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.450 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/DH-88/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -0.179 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.144 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/DH-88/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.485 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.093 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Canopy -->
+  <animation>
+    <name>IntCanopy</name>
+    <object-name>inttourvitre</object-name>
+    <object-name>intvitres</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntCanopy</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopy</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -85 </factor>
+    <center>
+      <x-m> 0.326 </x-m>
+      <y-m> 0.310 </y-m>
+      <z-m> 0.440 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

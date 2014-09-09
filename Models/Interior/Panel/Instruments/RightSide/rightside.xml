@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>rightside.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+
+  </animation>
+
+  <!-- FUEL 0 -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/RightSide/Instruments/fuel/fuel-0.xml</path>
+    <offsets>
+      <x-m>  0.035 </x-m>
+      <y-m> -0.064 </y-m>
+      <z-m>  0.000 </z-m>
+      <heading-deg> 25 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- FUEL 1 -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/RightSide/Instruments/fuel/fuel-1.xml</path>
+    <offsets>
+      <x-m> 0.035 </x-m>
+      <y-m> 0.036 </y-m>
+      <z-m> 0.000 </z-m>
+      <heading-deg> 25 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- CLOCK -->
+  <model>
+    <path>Aircraft/DH-88/Models/Interior/Panel/Instruments/RightSide/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.013 </x-m>
+      <y-m> 0.136 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

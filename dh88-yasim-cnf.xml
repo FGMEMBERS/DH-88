@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="dh88-base.xml">
+
+  <sim>
+
+    <description>De Havilland DH 88 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>dh88-yasim</aero>
+
+  </sim>
+
+</PropertyList>
